@@ -7,13 +7,18 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { FormsModule } from '@angular/forms';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { HighLightDirective } from './highlight.directive';
+import { DisplayGuestsDirective } from './display-guests.directive';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroesComponent,
     SignUpComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    HighLightDirective,
+    DisplayGuestsDirective
   ],
   imports: [
     BrowserModule,
