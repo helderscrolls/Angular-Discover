@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { FormsModule } from '@angular/forms';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroesComponent,
-    SignUpComponent
+    SignUpComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,

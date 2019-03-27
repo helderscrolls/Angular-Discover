@@ -20,3 +20,9 @@ h1 {
   * {
     font-family: Arial, Helvetica, sans-serif;
   }
+
+  .vis{
+    
+    height:100px;
+    display:none;
+}
