@@ -1,21 +1,20 @@
-import { Directive, ElementRef, Renderer2, HostListener, Input } from '@angular/core';
-
+import { Directive, ElementRef, OnInit, Renderer2, HostListener } from '@angular/core';
 
 @Directive({
-    selector: '[appHighLight]'
+    selector: '[appHighlight]'
 })
-export class HighLightDirective {
+export class HighlightDirective implements OnInit {
 
     constructor(private elRef: ElementRef, private renderer: Renderer2) { }
-    @Input() showMovies;
+
+    ngOnInit() {
+    }
 
     @HostListener('mouseenter') mouseEnterEvent(eventData: Event) {
-        if (this.showMovies) {
-            this.renderer.setStyle(this.elRef.nativeElement, 'background-color', 'green');
-        }
+        this.renderer.addClass(this.elRef.nativeElement, 'auBoutDeMaLife')
     }
 
     @HostListener('mouseleave') mouseLeaveEvent(eventData: Event) {
-        this.renderer.setStyle(this.elRef.nativeElement, 'background-color', 'transparent');
+        this.renderer.removeClass(this.elRef.nativeElement, 'auBoutDeMaLife')
     }
 }

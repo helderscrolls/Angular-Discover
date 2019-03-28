@@ -1,8 +1,8 @@
-import { DisplayGuestsDirective } from './display-guests.directive';
+import { DisplayMoviesDirective } from './display-movies.directive';
 
 describe('DisplayGuestsDirective', () => {
     it('should create an instance', () => {
-        const directive = new DisplayGuestsDirective(null, null);
+        const directive = new DisplayMoviesDirective(null, null);
         expect(directive).toBeTruthy();
     });
 });
