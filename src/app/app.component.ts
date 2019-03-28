@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Helder';
-  displayGuestList: boolean = true;
+  showMovies: boolean = true;
 }
