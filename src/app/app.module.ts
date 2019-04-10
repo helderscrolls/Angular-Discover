@@ -9,6 +9,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { HighlightDirective } from './highlight.directive';
 import { DisplayMoviesDirective } from './display-movies.directive';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DisplayMoviesDirective } from './display-movies.directive';
     SignUpComponent,
     UserProfileComponent,
     HighlightDirective,
-    DisplayMoviesDirective
+    DisplayMoviesDirective,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
