@@ -15,7 +15,7 @@ import { FormsModule } from '@angular/forms';
 
 export class AppComponent implements OnInit {
 
-  title = 'Atoze';
+  title = 'La Quête des Enfers';
 
   showMovies = true;
 

@@ -3,12 +3,8 @@ import { Directive, ElementRef, OnInit, Renderer2, HostListener } from '@angular
 @Directive({
     selector: '[appHighlight]'
 })
-export class HighlightDirective implements OnInit {
-
+export class HighlightDirective {
     constructor(private elRef: ElementRef, private renderer: Renderer2) { }
-
-    ngOnInit() {
-    }
 
     @HostListener('mouseenter') mouseEnterEvent(eventData: Event) {
         this.renderer.addClass(this.elRef.nativeElement, 'auBoutDeMaLife')
