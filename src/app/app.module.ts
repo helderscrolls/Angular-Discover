@@ -10,6 +10,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { HighlightDirective } from './highlight.directive';
 import { DisplayMoviesDirective } from './display-movies.directive';
 import { MenuComponent } from './menu/menu.component';
+import { UserService } from './services/user-service.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { MenuComponent } from './menu/menu.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [UserService,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

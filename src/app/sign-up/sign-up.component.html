@@ -1,2 +1,66 @@
-<h1> {{ email }} </h1>
-<input [(ngModel)]="email" type="email" name="email" />
+<h3>Template-driven Form</h3>
+<p *ngIf="isValidFormSubmitted" [ngClass]="'success'">
+  Form submitted successfully.
+</p>
+<form #userForm="ngForm" (ngSubmit)="onFormSubmit(userForm)">
+  <table>
+
+    <tr>
+      <td>Name:</td>
+      <td>
+        <input 
+          type="text"
+          name="userName" 
+          [(ngModel)]="user.userName" 
+          minlength="4"
+          #uname="ngModel"
+          ngModel required
+        />
+ 
+{{ uname.errors }}
+
+        <div *ngIf="uname.errors && userForm.submitted && !isValidFormSubmitted" [ngClass]="'error'">
+          <div *ngIf="uname.errors.required">
+              Le champ est requis.
+          </div>
+          <div *ngIf="uname.errors.minlength">
+              Le champ user doit dépasser 4 caractères.
+          </div>
+          <div *ngIf="uname.errors.maxlength">
+              Le champ user ne doit pas dépasser 25 caractères.
+            </div>
+        </div>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>Email:</td>
+      <td>
+        <input 
+          name="email" 
+          [ngModel]="user.email" 
+          #email="ngModel"
+          required email
+        />
+
+        <div *ngIf="email.errors && userForm.submitted && !isValidFormSubmitted" [ngClass]="'error'">
+          <div *ngIf="email.errors.required">
+            Le champ est requis.
+          </div>
+          <div *ngIf="email.errors.email">
+            Le champ email est invalide
+          </div>
+        </div>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+        <button>Submit</button>
+      </td>
+    </tr>
+
+  </table>
+</form>
