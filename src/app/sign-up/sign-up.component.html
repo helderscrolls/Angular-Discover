@@ -8,27 +8,20 @@
     <tr>
       <td>Name:</td>
       <td>
-        <input 
-          type="text"
-          name="userName" 
-          [(ngModel)]="user.userName" 
-          minlength="4"
-          #uname="ngModel"
-          ngModel required
-        />
- 
-{{ uname.errors }}
+        <input type="text" name="userName" [(ngModel)]="user.userName" minlength="4" maxlength="25" #uname="ngModel"
+          required />
+
 
         <div *ngIf="uname.errors && userForm.submitted && !isValidFormSubmitted" [ngClass]="'error'">
           <div *ngIf="uname.errors.required">
-              Le champ est requis.
+            Le champ est requis.
           </div>
           <div *ngIf="uname.errors.minlength">
-              Le champ user doit dépasser 4 caractères.
+            Le champ user doit dépasser 4 caractères.
           </div>
           <div *ngIf="uname.errors.maxlength">
-              Le champ user ne doit pas dépasser 25 caractères.
-            </div>
+            Le champ user ne doit pas dépasser 25 caractères.
+          </div>
         </div>
 
       </td>
@@ -37,12 +30,7 @@
     <tr>
       <td>Email:</td>
       <td>
-        <input 
-          name="email" 
-          [ngModel]="user.email" 
-          #email="ngModel"
-          required email
-        />
+        <input name="email" [ngModel]="user.email" #email="ngModel" required email />
 
         <div *ngIf="email.errors && userForm.submitted && !isValidFormSubmitted" [ngClass]="'error'">
           <div *ngIf="email.errors.required">
