@@ -11,6 +11,11 @@ import { HighlightDirective } from './highlight.directive';
 import { DisplayMoviesDirective } from './display-movies.directive';
 import { MenuComponent } from './menu/menu.component';
 import { UserService } from './services/user-service.service';
+import { SearchMovieComponent } from './components/search-movie/search-movie.component';
+import { UsersPageComponent } from './pages/users-page/users-page.component';
+import { SignUpPageComponent } from './pages/sign-up-page/sign-up-page.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { MoviesPageComponent } from './pages/movies-page/movies-page.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +24,12 @@ import { UserService } from './services/user-service.service';
     UserProfileComponent,
     HighlightDirective,
     DisplayMoviesDirective,
-    MenuComponent
+    MenuComponent,
+    SearchMovieComponent,
+    UsersPageComponent,
+    SignUpPageComponent,
+    HomePageComponent,
+    MoviesPageComponent
   ],
   imports: [
     BrowserModule,
