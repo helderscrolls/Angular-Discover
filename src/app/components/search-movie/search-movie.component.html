@@ -1,3 +1,54 @@
-<p>
-  search-movie works!
-</p>
+<form [formGroup]="moviesListForm" (ngSubmit)="onSubmit()" #myForm="ngForm">
+
+
+  <section formGroupName="loginOrTitle">
+    <!-- login block -->
+    <div>
+      <label for="login">Identifiant</label>
+      <input name="login" type="text" formControlName="login">
+    </div>
+    <!-- error block -->
+    <div *ngIf="moviesListForm.controls.loginOrTitle.errors && myForm.submitted">
+      <span *ngIf="moviesListForm.controls.loginOrTitle.errors.isRequired">
+        Merci de renseigner Idendifiant ou Titre</span>
+    </div>
+
+
+    <!-- title block -->
+    <div>
+      <label for="title">Titre</label>
+      <input name="title" type="text" formControlName="title">
+    </div>
+    <!-- error block -->
+    <div *ngIf="moviesListForm.controls.loginOrTitle.errors && myForm.submitted">
+      <span *ngIf="moviesListForm.controls.loginOrTitle.errors.isRequired">
+        Merci de renseigner Titre ou Identifiant</span>
+    </div>
+  </section>
+
+
+  <!-- type list block 
+  <div>
+    <label for="type-order">Type</label>
+    <select class="custom-select" (change)="changeCity($event)" formControlName="cityName">
+      <option value="" disabled>Choose your city</option>
+      <option *ngFor="let city of City" [ngValue]="city">{{city}}</option>
+    </select>
+  </div>-->
+
+  <!-- releaseDate block -->
+  <div>
+    <label for="releaseDate">Année de sortie</label>
+    <input name="releaseDate" type="number" formControlName="releaseDate">
+  </div>
+  <!-- error block -->
+  <section *ngIf="moviesListForm.controls.releaseDate.errors && myForm.submitted">
+    <span *ngIf="moviesListForm.controls.releaseDate.errors.required">Le champ Année de sortie est requis</span>
+
+    <div *ngIf="moviesListForm.controls.releaseDate.errors?.min || moviesListForm.controls.releaseDate.errors?.max">
+      <span>L'année doit être comprise entre {{minNum}} et {{maxNum}}.</span>
+    </div>
+  </section>
+
+  <button type="submit">Submit</button>
+</form>

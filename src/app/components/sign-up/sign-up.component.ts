@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-import { UserService } from '../services/user-service.service';
-import { User } from '../classes/user';
+import { UserService } from '../../services/user-service.service';
+import { User } from '../../classes/user';
 
 @Component({
   selector: 'app-sign-up',
