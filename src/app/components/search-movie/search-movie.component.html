@@ -1,10 +1,9 @@
 <form [formGroup]="moviesListForm" (ngSubmit)="onSubmit()" #myForm="ngForm">
 
-
   <section formGroupName="loginOrTitle">
     <!-- login block -->
     <div>
-      <label for="login">Identifiant</label>
+      <label for="login">Identifiant :</label>
       <input name="login" type="text" formControlName="login">
     </div>
     <!-- error block -->
@@ -16,7 +15,7 @@
 
     <!-- title block -->
     <div>
-      <label for="title">Titre</label>
+      <label for="title">Titre :</label>
       <input name="title" type="text" formControlName="title">
     </div>
     <!-- error block -->
@@ -27,28 +26,39 @@
   </section>
 
 
-  <!-- type list block 
+  <!-- type list block -->
   <div>
-    <label for="type-order">Type</label>
-    <select class="custom-select" (change)="changeCity($event)" formControlName="cityName">
-      <option value="" disabled>Choose your city</option>
-      <option *ngFor="let city of City" [ngValue]="city">{{city}}</option>
+    <label for="types">Types :</label>
+    <select formControlName="types" id="types">
+        <option selected *ngFor="let type of types, let i = index" [ngValue]="type">
+          <span [innerHTML]='type.type'></span>
+        </option>
     </select>
-  </div>-->
+  </div>
 
   <!-- releaseDate block -->
   <div>
-    <label for="releaseDate">Année de sortie</label>
+    <label for="releaseDate">Année de sortie :</label>
     <input name="releaseDate" type="number" formControlName="releaseDate">
   </div>
   <!-- error block -->
   <section *ngIf="moviesListForm.controls.releaseDate.errors && myForm.submitted">
     <span *ngIf="moviesListForm.controls.releaseDate.errors.required">Le champ Année de sortie est requis</span>
 
-    <div *ngIf="moviesListForm.controls.releaseDate.errors?.min || moviesListForm.controls.releaseDate.errors?.max">
-      <span>L'année doit être comprise entre {{minNum}} et {{maxNum}}.</span>
+    <div *ngIf="moviesListForm.controls.releaseDate.errors?.min">
+      <span>L'année doit être comprise entre {{minimumYear}} et {{maximumYear}}.</span>
     </div>
   </section>
+
+  <!-- fiche list block-->
+  <div *ngIf="moviesListForm.get('loginOrTitle').get('login').valid">
+      <label for="fiches">Fiches :</label>
+      <select formControlName="fiche" id="fiche">
+          <option selected *ngFor="let f of fiches, let i = index" [ngValue]="f">
+            <span [innerHTML]='f'></span>
+          </option>
+      </select>
+    </div>
 
   <button type="submit">Submit</button>
 </form>

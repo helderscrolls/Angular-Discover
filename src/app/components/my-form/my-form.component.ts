@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder, FormArray } from '@angular/forms';
-import { minDateValidator } from '../../services/min-date.validator';
+import { minDateValidator } from '../../validators/min-date.validator';
 
 @Component({
   selector: 'app-my-form',
