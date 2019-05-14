@@ -6,12 +6,8 @@ import { Skill } from 'src/app/classes/skill.model';
   templateUrl: './skill.component.html',
   styleUrls: ['./skill.component.css']
 })
-export class SkillComponent implements OnInit {
-  @Input() public skill: Skill;
+export class SkillComponent {
   
-  constructor() { }
-
-  ngOnInit() {
-  }
+  @Input() public skill: Skill;
 
 }

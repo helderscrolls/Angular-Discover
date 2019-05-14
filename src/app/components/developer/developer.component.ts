@@ -12,8 +12,6 @@ import { Skill } from 'src/app/classes/skill.model';
 export class DeveloperComponent implements OnInit {
   public developer: Developer;
 
-  constructor() { }
-
   ngOnInit() {
     this.developer = new Developer();
     this.developer.lastName = "Norte";
@@ -27,8 +25,5 @@ export class DeveloperComponent implements OnInit {
       { name: "Bootstrap", logo: "https://user-images.githubusercontent.com/2327532/39481401-fa7d2992-4d30-11e8-886d-c4a3ee88147f.png", site: "https://getbootstrap.com/" },
       { name: "AngularJS 7", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png", site: "https://angular.io/" }
     ];
-    console.log(this.developer.skills);
-    
   }
-
 }
