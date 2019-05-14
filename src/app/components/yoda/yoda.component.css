@@ -10,7 +10,6 @@
   background: #00bb28;
   border-radius: 0.4em;
 }
-
 .speech-bubble:after {
   content: "";
   position: absolute;
