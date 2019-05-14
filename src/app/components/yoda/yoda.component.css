@@ -2,6 +2,10 @@ section {
   margin-left: 10px;
 }
 
+img {
+  padding-left: 95px;
+}
+
 .mainHeader {
   margin-bottom: 2rem;
 }
@@ -14,9 +18,6 @@ section {
   margin-right: 10px;
 }
 
-img {
-  padding-left: 95px;
-}
 
 .speech-bubble {
   position: relative;
