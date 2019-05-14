@@ -18,6 +18,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { MoviesPageComponent } from './pages/movies-page/movies-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MyFormComponent } from './components/my-form/my-form.component';
+import { KitchenComponent } from './components/kitchen/kitchen.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { MyFormComponent } from './components/my-form/my-form.component';
     HomePageComponent,
     MoviesPageComponent,
     MyFormComponent,
+    KitchenComponent,
   ],
   imports: [
     BrowserModule,
