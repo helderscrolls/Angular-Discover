@@ -20,8 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MyFormComponent } from './components/my-form/my-form.component';
 import { KitchenComponent } from './components/kitchen/kitchen.component';
 import { MagicOvenComponent } from './components/magic-oven/magic-oven.component';
-import { DeveloperComponentComponent } from './components/developer-component/developer-component.component';
-import { SkillComponentComponent } from './components/skill-component/skill-component.component';
+import { DeveloperComponent } from './components/developer/developer.component';
+import { SkillComponent } from './components/skill/skill.component';
 
 
 @NgModule({
@@ -40,8 +40,8 @@ import { SkillComponentComponent } from './components/skill-component/skill-comp
     MyFormComponent,
     KitchenComponent,
     MagicOvenComponent,
-    DeveloperComponentComponent,
-    SkillComponentComponent,
+    DeveloperComponent,
+    SkillComponent,
   ],
   imports: [
     BrowserModule,
