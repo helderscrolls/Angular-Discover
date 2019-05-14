@@ -6,6 +6,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { SearchMovieComponent } from './components/search-movie/search-movie.component';
 import { MyFormComponent } from './components/my-form/my-form.component';
 import { KitchenComponent } from './components/kitchen/kitchen.component';
+import { DeveloperComponentComponent } from './components/developer-component/developer-component.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'kitchen',
     component: KitchenComponent
+  },
+  {
+    path: 'cv',
+    component: DeveloperComponentComponent
   },
 ];
 

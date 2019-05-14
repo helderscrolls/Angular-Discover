@@ -5,11 +5,16 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './kitchen.component.html',
   styleUrls: ['./kitchen.component.css']
 })
-export class KitchenComponent implements OnInit {
+export class KitchenComponent {
+  flourQuantity: number;
+  saltQuantity: number;
+  sugarQuantity: number;
+  eggQuantity: number;
+  numberOfCookies: number;
 
-  constructor() { }
+  cook = false;
 
-  ngOnInit() {
+  startCooking() {
+    this.cook = true;
   }
-
 }

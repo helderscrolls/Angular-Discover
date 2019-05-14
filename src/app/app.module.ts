@@ -19,6 +19,9 @@ import { MoviesPageComponent } from './pages/movies-page/movies-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MyFormComponent } from './components/my-form/my-form.component';
 import { KitchenComponent } from './components/kitchen/kitchen.component';
+import { MagicOvenComponent } from './components/magic-oven/magic-oven.component';
+import { DeveloperComponentComponent } from './components/developer-component/developer-component.component';
+import { SkillComponentComponent } from './components/skill-component/skill-component.component';
 
 
 @NgModule({
@@ -36,6 +39,9 @@ import { KitchenComponent } from './components/kitchen/kitchen.component';
     MoviesPageComponent,
     MyFormComponent,
     KitchenComponent,
+    MagicOvenComponent,
+    DeveloperComponentComponent,
+    SkillComponentComponent,
   ],
   imports: [
     BrowserModule,
