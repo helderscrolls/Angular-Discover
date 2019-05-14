@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Developer } from 'src/app/classes/developer.model';
-import { Skill } from 'src/app/classes/skill.model';
 
 @Component({
   selector: 'app-developer',
