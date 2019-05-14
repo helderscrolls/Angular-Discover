@@ -1,32 +1,37 @@
 <div class="container">
-    <form (submit)="startCooking()">
-      <h4>My Kitchen</h4>
-      <label for="flour">Flour quantity :</label>
-      <input type="number" name="flour" [(ngModel)]="flourQuantity">
-       
-      <label for="salt">Salt quantity :</label>
-      <input type="number" name="salt" [(ngModel)]="saltQuantity">
-       
-      <label for="sugar">Sugar quantity :</label>
-      <input type="number" name="sugar" [(ngModel)]="sugarQuantity">
-  
-      <label for="egg">Egg quantity :</label>
-      <input type="number" name="egg" [(ngModel)]="eggQuantity">
-  
-      <label for="number">Number of cookies :</label>
-      <input type="number" name="number" [(ngModel)]="numberOfCookies">
-  
-      <div>
-        <button type="submit">Cook !</button>
-      </div>
-    </form>
-  </div>
+  <form (submit)="startCooking()">
+    <h4>My Kitchen</h4>
+    <label for="flour">Flour quantity :</label>
+    <input type="number" name="flour" [(ngModel)]="flourQuantity">
+
+    <label for="salt">Salt quantity :</label>
+    <input type="number" name="salt" [(ngModel)]="saltQuantity">
+
+    <label for="sugar">Sugar quantity :</label>
+    <input type="number" name="sugar" [(ngModel)]="sugarQuantity">
+
+    <label for="egg">Egg quantity :</label>
+    <input type="number" name="egg" [(ngModel)]="eggQuantity">
+
+    <label for="number">Number of cookies :</label>
+    <input type="number" name="number" [(ngModel)]="numberOfCookies">
+
+    <div>
+      <button type="submit">Cook !</button>
+    </div>
+  </form>
+</div>
   
   <app-magic-oven
-  [startCooking]="cook" 
-  [numberOfCookies]="numberOfCookies"
-  [flour]="flourQuantity" 
-  [salt]="saltQuantity" 
-  [sugar]="sugarQuantity"
-  [egg]="eggQuantity">
+    [startCooking]="cook" 
+    [numberOfCookies]="numberOfCookies"
+    [flour]="flourQuantity" 
+    [salt]="saltQuantity" 
+    [sugar]="sugarQuantity"
+    [egg]="eggQuantity"
+    (getCookies)="onGetCookies($event)">
   </app-magic-oven>
+
+  <div class="container">
+    There are <b>{{cookiesCooked}}</b> cookies cooked !
+  </div>

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-magic-oven',
@@ -6,6 +6,12 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./magic-oven.component.css']
 })
 export class MagicOvenComponent {
+  @Output()
+  getCookies: EventEmitter<any> = new EventEmitter();
+
+  sendCookies() {
+    this.getCookies.emit(this.numberOfCookies);
+  }
 
   @Input()
   numberOfCookies: number

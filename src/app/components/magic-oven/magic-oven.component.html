@@ -1,15 +1,16 @@
 <div *ngIf="startCooking && flour && salt && sugar && egg; else noCooking">
-    Magic oven is making {{numberOfCookies}} cookies with :
-    <ul>
-      <li>{{flour}} g of flour</li>
-      <li>{{salt}} g of salt</li>
-      <li>{{sugar}} g of sugar</li>
-      <li>{{egg}} eggs</li>
-    </ul>
+  Magic oven is making {{numberOfCookies}} cookies with :
+  <ul>
+    <li>{{flour}} g of flour</li>
+    <li>{{salt}} g of salt</li>
+    <li>{{sugar}} g of sugar</li>
+    <li>{{egg}} eggs</li>
+  </ul>
+  <button (click)="sendCookies()">Get Cookies !</button>
+</div>
+
+<ng-template #noCooking>
+  <div>
+    Magic oven is waiting for ingredients...
   </div>
-  
-  <ng-template #noCooking>
-    <div>
-      Magic oven is waiting for ingredients...
-    </div>
-  </ng-template>
+</ng-template>

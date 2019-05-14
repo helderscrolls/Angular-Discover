@@ -22,6 +22,8 @@ import { KitchenComponent } from './components/kitchen/kitchen.component';
 import { MagicOvenComponent } from './components/magic-oven/magic-oven.component';
 import { DeveloperComponent } from './components/developer/developer.component';
 import { SkillComponent } from './components/skill/skill.component';
+import { YodaComponent } from './components/yoda/yoda.component';
+import { QuestionComponent } from './components/question/question.component';
 
 
 @NgModule({
@@ -42,6 +44,8 @@ import { SkillComponent } from './components/skill/skill.component';
     MagicOvenComponent,
     DeveloperComponent,
     SkillComponent,
+    YodaComponent,
+    QuestionComponent,
   ],
   imports: [
     BrowserModule,

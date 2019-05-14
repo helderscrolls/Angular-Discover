@@ -7,6 +7,7 @@ import { SearchMovieComponent } from './components/search-movie/search-movie.com
 import { MyFormComponent } from './components/my-form/my-form.component';
 import { KitchenComponent } from './components/kitchen/kitchen.component';
 import { DeveloperComponent } from './components/developer/developer.component';
+import { YodaComponent } from './components/yoda/yoda.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: 'cv',
     component: DeveloperComponent
+  },
+  {
+    path: 'yoda',
+    component: YodaComponent
   },
 ];
 

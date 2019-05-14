@@ -14,7 +14,13 @@ export class KitchenComponent {
 
   cook = false;
 
+  cookiesCooked: number = 0;
+  
   startCooking() {
     this.cook = true;
+  }
+
+  onGetCookies($event) {
+    this.cookiesCooked = + $event;
   }
 }
