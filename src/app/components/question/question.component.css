@@ -1,0 +1,11 @@
+h2 {
+  font-size: 1.3rem !important;
+}
+
+.alert-success {
+  width: 500px;
+}
+
+.alert-danger {
+  width: 500px;
+}

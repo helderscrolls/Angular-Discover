@@ -1,4 +1,6 @@
-<h1>Les réponses justes tu choisiras</h1>
+<section class="container">
+  
+<h1 class="mainHeader">Les réponses justes tu choisiras</h1>
 <div id="menu">
   <h2>Ta moyenne générale est de {{ average }}/20</h2>
   <p *ngIf="checked" class="speech-bubble">"Okay young padawan now you feel the dev force !"</p>
@@ -12,4 +14,7 @@
   [question]="question.title"
   [answer]="question.answer" 
   [id]="question.id" 
-  (getAnswer)="onGetAnswer($event)"></app-question>
+  (getAnswer)="onGetAnswer($event)">
+</app-question>
+
+</section>

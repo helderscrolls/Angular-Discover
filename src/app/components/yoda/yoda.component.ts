@@ -33,7 +33,7 @@ export class YodaComponent {
     },
     {
       id: "4",
-      title: "PrÉfÈres-tu les GUI au CLI ? ",
+      title: "Préféres-tu les GUI au CLI ? ",
       answer: false,
       score: 3
     },
