@@ -24,6 +24,7 @@ import { DeveloperComponent } from './components/developer/developer.component';
 import { SkillComponent } from './components/skill/skill.component';
 import { YodaComponent } from './components/yoda/yoda.component';
 import { QuestionComponent } from './components/question/question.component';
+import { CocktailListComponent } from './components/cocktail-list/cocktail-list.component';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { QuestionComponent } from './components/question/question.component';
     SkillComponent,
     YodaComponent,
     QuestionComponent,
+    CocktailListComponent,
   ],
   imports: [
     BrowserModule,
