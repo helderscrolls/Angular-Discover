@@ -8,6 +8,7 @@ import { MyFormComponent } from './components/my-form/my-form.component';
 import { KitchenComponent } from './components/kitchen/kitchen.component';
 import { DeveloperComponent } from './components/developer/developer.component';
 import { YodaComponent } from './components/yoda/yoda.component';
+import { CocktailListComponent } from './components/cocktail-list/cocktail-list.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path: 'yoda',
     component: YodaComponent
+  },
+  {
+    path: 'CocktailList',
+    component: CocktailListComponent
   },
 ];
 

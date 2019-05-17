@@ -1,3 +1,9 @@
-<p>
-  cocktail-list works!
-</p>
+<ul>
+  <li *ngFor="let cocktail of cocktails; let i = index">
+    <img src="{{cocktails[i].img}}">
+    <br>
+    Cocktail Name: {{cocktails[i].name}}
+    <br>
+    Cocktail Price: {{cocktails[i].price}}
+  </li>
+ </ul>

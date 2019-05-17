@@ -1,5 +1,5 @@
 import { TestBed, async } from '@angular/core/testing';
-import { CocktailListComponent } from './cocktail-list/cocktail-list.component';
+import { CocktailListComponent } from './components/cocktail-list/cocktail-list.component';
 import { CocktailService } from './services/cocktail.service';
 
 describe('Quest Test Suite', () => {

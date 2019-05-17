@@ -1,6 +1,7 @@
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -25,6 +26,7 @@ import { SkillComponent } from './components/skill/skill.component';
 import { YodaComponent } from './components/yoda/yoda.component';
 import { QuestionComponent } from './components/question/question.component';
 import { CocktailListComponent } from './components/cocktail-list/cocktail-list.component';
+import { CocktailService } from './services/cocktail.service';
 
 
 @NgModule({
@@ -54,8 +56,9 @@ import { CocktailListComponent } from './components/cocktail-list/cocktail-list.
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [UserService,],
+  providers: [UserService,CocktailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
