@@ -7,7 +7,7 @@ import { CocktailService } from '../../services/cocktail.service';
   styleUrls: ['./cocktail-list.component.css']
 })
 export class CocktailListComponent implements OnInit {
-  cocktails = [];
+  public cocktails = [];
 
   constructor(private cocktailService: CocktailService) { }
 
