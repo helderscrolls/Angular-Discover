@@ -1,12 +1,17 @@
 [
   {
     "name": "Mojito",
-    "price": 8,
-    "img": "https://static.cuisineaz.com/400x320/i14978-recette-de-mojito.jpeg"
+    "price": "7€",
+    "img": "https://zupimages.net/up/19/15/4j3c.jpeg"
   },
   {
-    "name": "Margarita",
-    "price": 7,
-    "img": "https://static.750g.com/images/600-600/5479d3dd25b24c4da9882350171a6b12/margarita.jpeg"
+    "name": "Ginto",
+    "price": "10€",
+    "img": "https://zupimages.net/up/19/15/oaei.jpg"
+  },
+  {
+    "name": "Vodka Orange",
+    "price": "5€",
+    "img": "https://zupimages.net/up/19/15/jkv4.jpg"
   }
 ]

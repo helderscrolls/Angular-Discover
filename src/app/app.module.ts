@@ -58,7 +58,7 @@ import { CocktailService } from './services/cocktail.service';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [UserService,CocktailService],
+  providers: [UserService, CocktailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
