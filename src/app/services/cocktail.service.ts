@@ -26,6 +26,4 @@ export class CocktailService {
   getCocktails() {
     return this.cocktails;
   }
-
-  constructor() { }
 }
