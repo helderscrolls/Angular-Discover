@@ -6,8 +6,6 @@ import { Injectable } from '@angular/core';
 })
 export class CocktailService {
 
-  constructor() { }
-
   getCocktail() {
     return [
       {

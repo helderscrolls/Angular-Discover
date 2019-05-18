@@ -9,10 +9,10 @@ import { CocktailService } from '../../services/cocktail.service';
 export class CocktailListComponent implements OnInit {
   public Cocktails = []
 
-  constructor(public _CocktailService: CocktailService) { }
+  constructor(public CocktailService: CocktailService) { }
 
   ngOnInit() {
-    this.Cocktails = this._CocktailService.getCocktail()
+    this.Cocktails = this.CocktailService.getCocktail()
   }
 
 }
