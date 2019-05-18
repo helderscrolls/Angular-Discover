@@ -1,9 +1,9 @@
-<ul>
-  <li *ngFor="let cocktail of cocktails; let i = index">
-    <img src="{{cocktails[i].img}}">
-    <br>
-    Cocktail Name: {{cocktails[i].name}}
-    <br>
-    Cocktail Price: {{cocktails[i].price}}
+<ul *ngFor="let Cocktail of Cocktails">
+  <li class="card">
+    <img [src]="Cocktail.photo" />
+    <div class="container">
+      <h4>{{ Cocktail.name }}</h4>
+      <p>{{Cocktail.price}}</p>
+    </div>
   </li>
- </ul>
+</ul>
